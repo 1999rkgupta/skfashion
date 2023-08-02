@@ -1,0 +1,87 @@
+.cartBlock {
+    height: auto;
+}
+
+.cartBlock>div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cartBlock>div>article>.div1 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 45em;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.cartBlock>div>article>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.cartBlock>div>article>div>div>p>button {
+    width: fit-content;
+    padding: 6px 10px;
+    color: crimson;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.cartBlock>div>article>div>div>p>span {
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.cartBlock>div img {
+    height: 300px;
+    width: 250px;
+}
+
+.emptyCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.emptyCart>img {
+    height: 80vh;
+    width: 80%;
+}
+
+.placeOrder {
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 13px 83px;
+    background-color: #ff9f00;
+    color: "white";
+    width: "9.2em";
+    border: none;
+    border-radius: "4px";
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+.remove{
+    cursor:pointer
+}
+button{
+    cursor: pointer;
+}
+.priceDetails {
+    width: 400px;
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}

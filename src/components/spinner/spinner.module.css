@@ -1,0 +1,50 @@
+.alignment {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.pulseLoader {
+    height: 60px;
+    margin: auto 0;
+    position: relative;
+    width: 60px;
+}
+
+.pulseLoader:before,
+.pulseLoader:after {
+    animation-name: pulseLoader;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    box-shadow: 0 0 4px #578ec5b3;
+    border-radius: 50%;
+    border: 7px solid #2677B0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.pulseLoader:after {
+    animation-delay: 1s;
+}
+
+@keyframes pulseLoader {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}

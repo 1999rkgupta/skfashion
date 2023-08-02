@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Lato&display=swap');
+
+.footerBlock{
+    margin-top: 2em;
+    height: 85vh;
+    width: 100%;
+    background-color: #0e1133;
+    color: white;
+        font-family: 'Hind',
+        sans-serif;
+}
+.footerBlock>article{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+}
+.footerBlock>article>.footerBlockDiv1{
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+.footerBlock>article .Aside1{
+    width: 25%;
+        color: rgba(198, 195, 195, 0.78);
+}
+.footerBlock>article .Aside1 img{
+     width: 120px;
+     height: 35px;
+}
+.footerBlock>article .Aside1 span{
+    font-size: 50px;
+}
+.footerBlock>article .Aside2{
+    width: 20%;
+}
+.footerBlock>article h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.footerBlock>article ul li{
+    list-style: none;
+        color: rgba(198, 195, 195, 0.78);
+
+}
+.footerBlock>article .Aside3 {
+    width: 20%;
+}
+.footerBlock>article .Aside4 {
+    width: 25%;
+    position: relative;
+}
+.footerBlock>article .Aside4 input{
+    width: 100%;
+    padding: 1em;
+}

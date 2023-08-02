@@ -1,0 +1,140 @@
+.seprateItem {
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    gap: 40px;
+}
+
+.div1 {
+    text-align: center;
+}
+
+.seprateItem>.div2 {
+    position: relative;
+}
+
+.seprateItem>.div2>.price {
+    margin-top: 100px;
+    font-size: 35px;
+
+}
+
+.seprateItem>.div2>div {
+
+    position: absolute;
+    bottom: 170px;
+
+}
+
+.seprateItem img {
+    height: 500px;
+    width: 400px;
+
+}
+
+.addTocart {
+    padding: 8px 16px;
+    background-color: #fb641b;
+    color: white;
+    font-size: 20px;
+    padding: 19px 45px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 35px;
+}
+
+.goTocart {
+    padding: 8px 16px;
+    background-color: #124a15;
+    font-size: 20px;
+    padding: 19px 45px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 35px;
+}
+
+.addTocart>a {
+    color: white;
+}
+
+.goTocart>a {
+    color: white;
+}
+
+.buyNow {
+    padding: 8px 16px;
+    background-color: #ff9f00;
+    color: white;
+    font-size: 20px;
+    padding: 19px 45px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 50px;
+}
+
+.buyNow>a {
+    color: white;
+}
+
+.specialprice {
+    color: #50a541;
+    position: absolute;
+    top: 150px;
+    font-size: 17px;
+}
+
+.price {
+    position: absolute;
+    top: 80px;
+    font-weight: 900;
+}
+
+.discount {
+    position: absolute;
+    top: 190px;
+    color: #878787;
+    left: 110px;
+    font-size: 24px;
+}
+
+.disPercentage {
+    position: absolute;
+    top: 192px;
+    color: #50a541;
+    left: 180px;
+    font-size: 24px;
+}
+
+.rating {
+    position: absolute;
+    top: 235px;
+    padding: 4px 20px 4px 8px;
+    color: #fff;
+    background-color: #50a541;
+    left: 10px;
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+.star {
+    position: absolute;
+    top: 5px;
+}
+
+.rate {
+    position: absolute;
+    top: 238px;
+    color: #878787;
+    left: 100px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.spinner {
+    height: 100vh;
+    width: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f4f4;
+
+}

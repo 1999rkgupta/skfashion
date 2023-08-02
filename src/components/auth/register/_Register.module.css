@@ -1,0 +1,60 @@
+/* #body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(250, 55, 94);
+    align-items: center; */
+    /* background-image: url("https://t3.ftcdn.net/jpg/02/11/07/58/360_F_211075862_3x8H7GsfjhYncIxGjo6rU1rB6UQnUvTN.jpg"),; */
+/* } */
+
+/* .formBlock {
+    padding: 40px 30px 20px 30px;
+    width: fit-content;
+    text-align: center;
+    border: 1px solid crimson;
+    border-radius: 4px;
+    z-index: 4;
+}
+
+.formBlock input {
+    padding: 7px 7px 10px 7px;
+    margin: 5px;
+    width: 15em;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+#body h2 {
+    padding-bottom: 0.5em;
+    font-weight: 400;
+}
+
+button {
+    padding: 11px 22px;
+    margin: 15px 0px 5px 0;
+    background-color: rgb(188, 29, 61);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(245, 87, 119);
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+} */
+
+.registerBlock{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: #fff;
+}

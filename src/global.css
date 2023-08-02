@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
+}
+
+body {
+    background-color: rgb(245, 244, 244);
+}
+.navbarBlock{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+@media only screen and (max-width: 900px) {
+    #div2>ul {
+        gap: 2em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #div2>ul {
+        display: none;
+    }
+
+    #img {
+        height: 30vh;
+    }
+
+    #cardBlock>article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #menu {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+    #cardBlock>article {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+.active {
+    color: blue;
+}
