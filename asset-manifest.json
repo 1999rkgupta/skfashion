@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/skfashion/static/css/main.924ef7ae.css",
+    "main.js": "/skfashion/static/js/main.38a964b1.js",
+    "static/media/carosel3.png": "/skfashion/static/media/carosel3.120cc2d84fe72340b21a.png",
+    "static/media/cartBackground.jpg": "/skfashion/static/media/cartBackground.3b3eeacd5bde7b2bb733.jpg",
+    "static/media/carosel1.jpg": "/skfashion/static/media/carosel1.0c29a3dc1ee653cfbe6f.jpg",
+    "static/media/emptyWishList.jpg": "/skfashion/static/media/emptyWishList.aa4b0eaad7d892d892a4.jpg",
+    "static/media/comingSoon.jpg": "/skfashion/static/media/comingSoon.53af77a2fc9b0dff865d.jpg",
+    "static/media/empty-cart.png": "/skfashion/static/media/empty-cart.72e00edc7adc1466c1a7.png",
+    "index.html": "/skfashion/index.html",
+    "main.924ef7ae.css.map": "/skfashion/static/css/main.924ef7ae.css.map",
+    "main.38a964b1.js.map": "/skfashion/static/js/main.38a964b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.924ef7ae.css",
+    "static/js/main.38a964b1.js"
+  ]
+}
