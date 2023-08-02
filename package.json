@@ -1,7 +1,7 @@
 {
   "name": "skfashion",
   "version": "0.1.0",
-  "homepage": "https://1999rkgupta.github.io/skfashion",
+  "homepage": "https://1999rkgupta.github.io/skfashion/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
