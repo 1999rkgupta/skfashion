@@ -21,6 +21,7 @@ const Cart = () => {
     totalD,
     setTotalDis,
   } = useContext(PostContext);
+
   let Remove = id => {
     let list = [...store];
     list.splice(id, 1);
@@ -28,14 +29,16 @@ const Cart = () => {
   };
 
   // !total Price:
-  console.log(store);
+
   let total = null;
 
+
   for (let i = 0; i < store.length; i++) {
-    total += store[i].price;
+    total =
+      total +
+      store[i].price * count.filter(ef => ef.id === store[i].id)[0].count;
   }
   setTotal(Math.round(total));
-  console.log(totall);
 
   // !total Discount:
   let dis = null;
@@ -44,7 +47,7 @@ const Cart = () => {
     dis += store[i].rating.count;
   }
   setTotalDis(Math.round(dis));
-  console.log(totalD);
+  // console.log(totalD);
 
   useEffect(() => {
     AOS.init();
@@ -163,9 +166,7 @@ const Cart = () => {
                   </div>
                 </div>
                 <Link to="/deliver">
-                  <button className={styles.placeOrder} >
-                    Place Order
-                  </button>
+                  <button className={styles.placeOrder}>Place Order</button>
                 </Link>
               </article>
             );
