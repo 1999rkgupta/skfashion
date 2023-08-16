@@ -22,16 +22,18 @@ const Cart = () => {
     setTotalDis,
   } = useContext(PostContext);
 
+  console.log(store);
+
   let Remove = id => {
     let list = [...store];
     list.splice(id, 1);
+    console.log(list);
     setStore(list);
   };
 
   // !total Price:
 
   let total = null;
-
 
   for (let i = 0; i < store.length; i++) {
     total =

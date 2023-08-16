@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 const Deliver = () => {
   let { state } = useLocation();
   let { deliver, setDeliver, store } = useContext(PostContext);
-  console.log(store);
+  // console.log(store);
   let [add, setAdd] = useState([
     {
       id: 0,
