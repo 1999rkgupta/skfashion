@@ -12,10 +12,16 @@ export const PostContextProvider = ({ children }) => {
   let [filter, setFilter] = useState(null);
   let [totall, setTotal] = useState(null);
   let [totalD, setTotalDis] = useState(null);
+  let [din, setDin] = useState(null);
+  let [mah, setMah] = useState(null);
+  let [day, setDay] = useState(null);
+  let [button, setButton] = useState(true);
 
   return (
     <PostContext.Provider
       value={{
+        day,
+        setDay,
         store,
         setStore,
         setCount,
@@ -36,6 +42,12 @@ export const PostContextProvider = ({ children }) => {
         setTotal,
         totalD,
         setTotalDis,
+        din,
+        setDin,
+        mah,
+        setMah,
+        button,
+        setButton,
       }}
     >
       {children}

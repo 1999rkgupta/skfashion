@@ -1,8 +1,10 @@
 .NavBarBlock {
-    position: -webkit-sticky;
     height: 80px;
     width: 100%;
     background-color: rgb(221, 221, 221);
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .NavBarBlock>article {
@@ -41,9 +43,7 @@
     gap: 5em;
 }
 
-.NavBarBlock>article>.div2>ul>li {
-    font-weight: 700;
-}
+
 
 .NavBarBlock>article>.div3 {
     height: inherit;

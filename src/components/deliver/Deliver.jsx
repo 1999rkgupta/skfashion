@@ -4,11 +4,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { PostContext } from "../../context/ContextApi";
 import { Link, useLocation } from "react-router-dom";
-import skLogo from "../../asset/skFashionLogo.png"
+import skLogo from "../../asset/skFashionLogo.png";
 import { toast } from "react-toastify";
 
 const Deliver = () => {
   let { state } = useLocation();
+  console.log(state);
   let { deliver, setDeliver, store } = useContext(PostContext);
   // console.log(store);
   let [add, setAdd] = useState([
@@ -51,7 +52,7 @@ const Deliver = () => {
 
   return (
     <div className={styles.deliBlock} data-aos="zoom-in-right">
-      <div  className={styles.delivAd}>
+      <div className={styles.delivAd}>
         <span className={styles.logo}>
           <Link to="/">
             <i style={{ fontSize: "22px", color: "#fff", marginRight: "4em" }}>
@@ -85,10 +86,12 @@ const Deliver = () => {
               {deliver == val.id ? (
                 <button className={styles.deliverHere} data-aos="zoom-in-left">
                   <Link
-                    state={[state, val]}
+                    state={state ? [state, val] : [store, val, { pos: true }]}
                     to="/success"
                     style={{ color: "#fff" }}
-                    onClick={()=>toast.success(`Successfully order confirmed`)}
+                    onClick={() =>
+                      toast.success(`Successfully order confirmed`)
+                    }
                   >
                     DELIVER HERE
                   </Link>

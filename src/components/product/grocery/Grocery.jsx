@@ -96,30 +96,53 @@ const Grocery = () => {
                     setWishlist([...wishlist, val]);
                   }}
                 > */}
-                <span className={styles.whishList}>
-                  <Checkbox
-                    value={val.id}
-                    onChange={handleOnChange}
-                    onClick={ef => {
-                      if (ef.target.checked) {
-                        setWishlist([...wishlist, val]);
-                        toast.success(`Successfully Added to wishlist`);
-                      } else {
-                        setWishlist(wishlist.filter(e => e.id != val.id));
-                        toast.success(`Successfully Removed from wishlist`);
-                      }
-                    }}
-                    {...label}
-                    icon={<FavoriteBorder />}
-                    checkedIcon={<Favorite />}
-                    sx={{
-                      color: "gray",
-                      "&.Mui-checked": {
-                        color: pink[600],
-                      },
-                    }}
-                  />
-                </span>
+                {window.localStorage.getItem("userName") ? (
+                  <span className={styles.whishList}>
+                    <Checkbox
+                      value={val.id}
+                      onChange={handleOnChange}
+                      onClick={ef => {
+                        if (ef.target.checked) {
+                          setWishlist([...wishlist, val]);
+                          toast.success(`Successfully Added to wishlist`);
+                        } else {
+                          setWishlist(wishlist.filter(e => e.id != val.id));
+                          toast.success(`Successfully Removed from wishlist`);
+                        }
+                      }}
+                      {...label}
+                      icon={<FavoriteBorder />}
+                      checkedIcon={<Favorite />}
+                      sx={{
+                        color: "gray",
+                        "&.Mui-checked": {
+                          color: pink[600],
+                        },
+                      }}
+                    />
+                  </span>
+                ) : (
+                  <Link
+                    to="/login"
+                    onClick={() => toast.success(`please login first`)}
+                  >
+                    <span className={styles.whishList}>
+                      <Checkbox
+                        value={val.id}
+                        onChange={handleOnChange}
+                        {...label}
+                        icon={<FavoriteBorder />}
+                        checkedIcon={<Favorite />}
+                        sx={{
+                          color: "gray",
+                          "&.Mui-checked": {
+                            color: pink[600],
+                          },
+                        }}
+                      />
+                    </span>
+                  </Link>
+                )}
                 {/* </Link> */}
                 <Link to="/item" onClick={() => fetchItem(val.id)}>
                   <img src={val.image} alt="image1" />

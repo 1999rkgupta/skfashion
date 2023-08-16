@@ -1,14 +1,17 @@
-.cartBlock {
+.cartBlock>div {
     height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-.cartBlock>div {
+.cartBlock>div>div {
     display: flex;
     flex-direction: column;
     gap: 25px;
+
 }
 
-.cartBlock>div>article>.div1 {
+.cartBlock>div>div>article>.div1 {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
         rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     width: 45em;
@@ -18,14 +21,14 @@
     position: relative;
 }
 
-.cartBlock>div>article>div>div {
+.cartBlock>div>div>article>div>div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 15px;
 }
 
-.cartBlock>div>article>div>div>p>button {
+.cartBlock>div>div>article>div>div>p>button {
     width: fit-content;
     padding: 6px 10px;
     color: crimson;
@@ -33,7 +36,7 @@
     border-radius: 50%;
 }
 
-.cartBlock>div>article>div>div>p>span {
+.cartBlock>div>div>article>div>div>p>span {
     padding: 0 10px;
     font-size: 18px;
 }
@@ -51,37 +54,53 @@
     width: 100%;
 }
 
-.emptyCart>img {
+.emptyCart>a>img {
     height: 80vh;
     width: 80%;
 }
 
-.placeOrder {
+.placeOrder{
+     position: sticky;
+    top: 60vh;
+}
+.placeOrder>button {
+    margin: 27vh 0 0 15vh;
     color: #fff;
-    font-size: 18px;
+    font-size: 23px;
     border-radius: 5px;
-    padding: 13px 83px;
+    padding: 19px 103px;
     background-color: #ff9f00;
     color: "white";
     width: "9.2em";
     border: none;
     border-radius: "4px";
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+
 }
-.remove{
-    cursor:pointer
+
+.remove {
+    cursor: pointer
 }
-button{
+
+button {
     cursor: pointer;
 }
+
 .priceDetails {
-    width: 400px;
-    position: absolute !important;
-    top: 20px !important;
-    right: 20px !important;
+    position: sticky;
+    top: 100px;
+    width: 430px;
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 15px;
+    border-radius: 4px;
+    margin-right: 25px;
+}
+
+.productDetails {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }

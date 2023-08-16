@@ -12,6 +12,7 @@ import Favorite from "@mui/icons-material/Favorite";
 import { toast } from "react-toastify";
 import { pink } from "@mui/material/colors";
 import Spinner from "../spinner/Spinner";
+import { RxCross2 } from "react-icons/rx";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Card = () => {
@@ -30,6 +31,7 @@ const Card = () => {
     sep,
     filter,
   } = useContext(PostContext);
+  console.log(wishlist);
 
   useEffect(() => {
     AOS.init();
@@ -72,7 +74,7 @@ const Card = () => {
     }
   };
 
-  console.log(wishlist);
+  // console.log(wishlist);
 
   return (
     <section id="cardBlock" className={styles.cardBlock}>
@@ -86,30 +88,61 @@ const Card = () => {
             if (val.title.toString().includes(filter)) {
               return (
                 <div key={ind} data-aos="flip-left">
-                  <span className={styles.whishList}>
-                    <Checkbox
-                      value={val.id}
-                      onChange={handleOnChange}
-                      onClick={ef => {
-                        if (ef.target.checked) {
-                          setWishlist([...wishlist, val]);
-                          toast.success(`Successfully Added to wishlist`);
-                        } else {
-                          setWishlist(wishlist.filter(e => e.id != val.id));
-                          toast.success(`Successfully Removed from wishlist`);
-                        }
-                      }}
-                      {...label}
-                      icon={<FavoriteBorder />}
-                      checkedIcon={<Favorite />}
-                      sx={{
-                        color: "gray",
-                        "&.Mui-checked": {
-                          color: pink[600],
-                        },
-                      }}
-                    />
-                  </span>
+                  {window.localStorage.getItem("userName") ? (
+                    <span className={styles.whishList}>
+                      {wishlist.filter(fg => fg.id === val.id).length === 1 ? (
+                        <span
+                          // onClick={setWishlist(
+                          //   wishlist.filter(e => e.id != val.id)
+                          // )}
+                        >
+                          <RxCross2 />
+                        </span>
+                      ) : (
+                        <Checkbox
+                          value={val.id}
+                          onChange={handleOnChange}
+                          onClick={ef => {
+                            if (ef.target.checked) {
+                              setWishlist([...wishlist, val]);
+                              toast.success(`Successfully Added to wishlist`);
+                            } 
+                          }}
+                          {...label}
+                          icon={<FavoriteBorder />}
+                          checkedIcon={<Favorite />}
+                          sx={{
+                            color: "gray",
+                            "&.Mui-checked": {
+                              color: pink[600],
+                            },
+                          }}
+                        />
+                      )}
+                      
+                    </span>
+                  ) : (
+                    <Link
+                      to="/login"
+                      onClick={() => toast.success(`please login first`)}
+                    >
+                      <span className={styles.whishList}>
+                        <Checkbox
+                          value={val.id}
+                          onChange={handleOnChange}
+                          {...label}
+                          icon={<FavoriteBorder />}
+                          checkedIcon={<Favorite />}
+                          sx={{
+                            color: "gray",
+                            "&.Mui-checked": {
+                              color: pink[600],
+                            },
+                          }}
+                        />
+                      </span>
+                    </Link>
+                  )}
                   <Link to="/item" onClick={() => fetchItem(val.id)}>
                     <img src={val.image} alt="image1" />
                   </Link>

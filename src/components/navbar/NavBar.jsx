@@ -6,7 +6,7 @@ import { MdPermIdentity } from "react-icons/md";
 import { BiSearch } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { PostContext } from "../../context/ContextApi";
 import { CgProfile } from "react-icons/cg";
 import Checkbox from "@mui/material/Checkbox";
@@ -43,18 +43,18 @@ const NavBar = () => {
         </div>
         <div id="div2" className={styles.div2}>
           <ul>
-            <Link to="/mens">
+            <NavLink activeClassName={styles.active} to="/mens">
               <li>MENS</li>
-            </Link>
-            <Link to="womens">
+            </NavLink>
+            <NavLink activeClassName={styles.active} to="womens">
               <li>WOMENS</li>
-            </Link>
-            <Link to="electronic">
+            </NavLink>
+            <NavLink activeClassName={styles.active} to="electronic">
               <li>ELECTRONICS</li>
-            </Link>
-            <Link to="grocery">
+            </NavLink>
+            <NavLink activeClassName={styles.active} to="grocery">
               <li>GROCERY</li>
-            </Link>
+            </NavLink>
           </ul>
         </div>
         <div className={styles.div3}>
